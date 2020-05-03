@@ -1,0 +1,9 @@
+h1{
+	color: black;
+}
+
+@media screen and (min-width: 1024px){
+.navbar-menu {
+    display:block;
+}
+}

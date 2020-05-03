@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+//import Acceuil from './components/Acceuil';
+import Topbar from './components/Topbar';
+
+class App extends React.Component{
+  state = {
+    todos:[
+          {
+            id:1,
+            title: 'first title',
+            complete: true
+          },
+          {
+            id:2,
+            title: 'second title',
+            complete: false
+          },
+          {
+            id:3,
+            title: 'third title',
+            complete: true
+          },
+          {
+            id:4,
+            title: 'fourth title',
+            complete: false
+          },
+    ]
+  }
+  render() {
+console.log(this.state.todos)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Topbar/>
+
     </div>
   );
+}
 }
 
 export default App;
